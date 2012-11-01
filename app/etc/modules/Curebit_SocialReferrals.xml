@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Curebit_SocialReferrals>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Checkout />
+            </depends>
+        </Curebit_SocialReferrals>
+    </modules>
+</config>

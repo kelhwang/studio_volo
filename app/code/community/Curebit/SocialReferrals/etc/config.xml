@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Curebit_SocialReferrals>
+            <version>0.1.1</version>
+        </Curebit_SocialReferrals>
+    </modules>        
+    <global> 
+    	<blocks>
+            <curebit_socialreferrals><class>Curebit_SocialReferrals_Block</class></curebit_socialreferrals>
+        </blocks>
+        
+    	<helpers>
+            <curebit_socialreferrals>
+                <class>Curebit_SocialReferrals_Helper</class>
+            </curebit_socialreferrals>
+        </helpers>
+        
+    	<models>
+            <curebit_socialreferrals>
+                <class>Curebit_SocialReferrals_Model</class>
+            </curebit_socialreferrals>
+        </models>  
+        
+        <events>
+            <!-- only event that will fire during full page cache -->
+            <http_response_send_before>
+                <observers>
+                    <curebit_coupon_intercept>
+                        <type>singleton</type>
+                        <class>curebit_socialreferrals/add</class>
+                        <method>addCouponCodeFromUrl</method>                    
+                    </curebit_coupon_intercept>
+                </observers>
+            </http_response_send_before>
+            
+            <checkout_cart_product_add_after>
+                <observers>
+                    <curebit_socialreferrals>
+                        <type>singleton</type>
+                        <class>curebit_socialreferrals/add</class>
+                        <method>cartItemAdded</method>
+                    </curebit_socialreferrals>
+                </observers>
+            </checkout_cart_product_add_after>
+            
+            
+            <controller_action_postdispatch>
+                <observers>
+                    <curebit_socialreferrals_apply_coupon>
+                        <type>singleton</type>
+                        <class>curebit_socialreferrals/add</class>
+                        <method>addCouponAfterCartAdd</method>
+                    </curebit_socialreferrals_apply_coupon>                
+                </observers>
+            </controller_action_postdispatch>
+        </events>
+        
+    </global>
+    <frontend>
+        <routers>
+            <curebit_socialreferrals>
+                <use>standard</use>
+                <args>
+                    <module>Curebit_SocialReferrals</module>
+                    <frontName>curebit</frontName>
+                </args>
+            </curebit_socialreferrals>
+        </routers>    
+        <layout>
+            <updates>
+                <curebit>
+                    <file>curebit.xml</file>
+                </curebit>
+            </updates>
+        </layout>
+    </frontend>
+    
+    <default>
+    	<checkout>
+    		<curebit>
+    			<enabled>0</enabled>
+    			<site_id></site_id>
+    			<debug>0</debug>    			
+    		</curebit>
+    	</checkout>
+    </default>
+</config>

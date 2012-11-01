@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Curebit_Onepage>
+			<version>0.1.0</version>
+		</Curebit_Onepage>
+	</modules>
+	<frontend>
+		<routers>
+			<curebit_onepage>
+				<use>standard</use>
+				<args>
+					<module>Curebit_Onepage</module>
+					<frontName>curebit_onepage</frontName>
+				</args>
+			</curebit_onepage>
+		</routers>
+	</frontend>
+	<global>
+		<blocks>
+			<curebit_onepage>
+				<class>Curebit_Onepage_Block</class>
+			</curebit_onepage>
+		</blocks>
+		<models>
+			<curebit_onepage>
+				<class>Curebit_Onepage_Model</class>
+			</curebit_onepage>
+			<checkout>
+			    <rewrite>
+			        <session>Curebit_Onepage_Model_Checkout_Session</session>
+			    </rewrite>
+			</checkout>
+		</models>
+		<helpers>
+			<curebit_onepage>
+				<class>Curebit_Onepage_Helper</class>
+			</curebit_onepage>
+		</helpers>
+	</global>
+</config>

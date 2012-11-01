@@ -1,0 +1,29 @@
+<config>
+    <api>
+        <resources>
+            <curebit translate="title" module="curebit_socialreferrals">
+                <model>curebit_socialreferrals/curebit_api</model>
+                <title>curebit API</title>
+                <acl>curebit</acl>
+                <methods>
+                    <create_coupon translate="title" module="curebit_socialreferrals">
+                        <title>Method Name</title>
+                        <acl>curebit/create_coupon</acl>
+                        <!-- <method>[ALIAS]</method> -->
+                    </create_coupon>
+                </methods>
+            </curebit>
+        </resources>
+        <acl>
+            <resources>
+                <curebit translate="title" module="curebit_socialreferrals">
+                    <title>Curebit ACL</title>
+                    <sort_order>1</sort_order>
+                    <create_coupon translate="title" module="curebit_socialreferrals">
+                        <title>Create Coupon Method ACL</title>
+                    </create_coupon>
+                </curebit>
+            </resources>
+        </acl>
+    </api>
+</config>
