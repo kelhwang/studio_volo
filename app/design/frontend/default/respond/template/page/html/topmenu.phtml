@@ -35,6 +35,6 @@
 <?php if($_menu): ?>
 <ul id="menu">
 	<?php echo $_menu ?>
-	<?php echo $this->getChildHtml('menuExtra') ?>
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('menu_extra')->toHtml() ?> 
 </ul>
 <?php endif ?>
