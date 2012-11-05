@@ -51,8 +51,9 @@
 			<action method="addItem"><type>skin_js</type><name>js/jquery-1.8.2.min.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/jquery-ui-1.9.1.custom.min.js</name></action>			
 			<!--<action method="addItem"><type>skin_js</type><name>js/respond.min.js</name></action>-->
-			<action method="addItem"><type>skin_js</type><name>js/select-menu.js</name></action>
+			<!--<action method="addItem"><type>skin_js</type><name>js/select-menu.js</name></action>-->
 			<action method="addItem"><type>skin_js</type><name>js/jquery.colorbox.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/waypoints.min.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/firstImpression.min.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/volo.js</name></action>
 		</reference>

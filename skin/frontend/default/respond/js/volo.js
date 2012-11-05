@@ -10,6 +10,21 @@ $j(document).ready(function() {
 		$j('ul:first',this).stop(true,true).fadeOut(0);
     });
 	
+	/* STICKY HEADER */
+	
+	$j('#menu').waypoint(function(event, direction) {
+		if (direction === 'down') {		
+			$j('#header-wrap').clone().attr('id', 'header-wrap2').insertAfter($j("#header-wrap")).stop(true,true).fadeIn(250);
+		}
+		else {
+			$j('#header-wrap2').fadeOut(100, function() {
+				$j(this).remove();
+			});
+		}
+	}, {
+		offset: -40
+	});
+
 	/* SLIDER */
 	
 	if($j('#slider').length > 0) {	
