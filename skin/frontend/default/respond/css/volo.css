@@ -360,6 +360,10 @@ body {
 #menu ul ul 					{ left: 100%; top: 0; }
 
 
+/**************************************************
+HOMEPAGE
+**************************************************/
+
 /* SLIDER */
 
 #slider {
@@ -417,3 +421,42 @@ body {
 	background: url(../images/volo/next.png) no-repeat;
 }
 
+/* VALUE PROPOSITION */
+
+#value {
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+	font: bold 30px/83px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+/* PROMOTIONS */
+
+#promotions .col {
+	float: left;
+	padding: 10px 5px 5px;
+	width: 310px;
+}
+#promotions .promo img {
+	float: left;
+	margin: 0 0 5px;
+	border: 1px solid #f0f0f0;
+	border-right: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+/* SOCIAL */
+
+#social {
+	clear: both;
+	padding: 15px 0;
+	border-top: 1px solid #000;
+}
+#social .col {
+	float: left;
+	padding: 5px 5px 0;
+	width: 310px;
+}
+#social .social img {
+	float: left;
+}
