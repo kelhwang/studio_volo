@@ -76,7 +76,7 @@
 				</block>
 			</block>
 			
-			<block type="page/template_links" name="top.links.custom2" as="topLinksCustom2">
+			<block type="page/template_links" name="top.links.test" as="topLinksTest">
 				<action method="addLink" translate="label title” module="customer"><label>About Us</label><url>about</url><title>About Us</title><prepare/><urlParams/><position>10</position></action> 
 				<action method="addLink" translate="label title” module="customer"><label>Invite friends, share $40</label><url>invite</url><title>Invite friends, share $40</title><prepare/><urlParams/><position>20</position></action> 
 			</block>		
