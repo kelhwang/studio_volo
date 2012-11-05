@@ -42,14 +42,15 @@
 			
 			
 			<!-- Remove print.css and styles-ie.css, styles are now all in styles.css to reduce http request -->
-			<action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
-			<action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name><params/></action>
+			<!--<action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+			<action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name><params/></action>-->
 			<action method="addItem"><type>skin_css</type><name>css/colorbox.css</name></action>
 			<action method="addItem"><type>skin_css</type><name>css/volo.css</name></action>
 
 			<!-- <action method="addItem"><type>skin_js</type><name>js/jquery.mobile-1.1.0.min.js</name></action> -->
-			<action method="addItem"><type>skin_js</type><name>js/jquery-1.7.2.min.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/respond.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/jquery-1.8.2.min.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/jquery-ui-1.9.1.custom.min.js</name></action>			
+			<!--<action method="addItem"><type>skin_js</type><name>js/respond.min.js</name></action>-->
 			<action method="addItem"><type>skin_js</type><name>js/select-menu.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/jquery.colorbox.js</name></action>
 			<action method="addItem"><type>skin_js</type><name>js/firstImpression.min.js</name></action>
