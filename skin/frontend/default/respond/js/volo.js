@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$j(document).ready(function() {
 
 	/* SLIDER */
 	
