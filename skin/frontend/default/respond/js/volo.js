@@ -1,5 +1,15 @@
 $j(document).ready(function() {
 
+	/* MENU */
+	
+    $j("#menu li").hover(function(){    
+        $j(this).addClass("hover");
+        $j('ul:first',this).stop(true,true).fadeIn(150);
+    }, function(){    
+        $j(this).removeClass("hover");
+		$j('ul:first',this).stop(true,true).fadeOut(0);
+    });
+	
 	/* SLIDER */
 	
 	if($j('#slider').length > 0) {	
