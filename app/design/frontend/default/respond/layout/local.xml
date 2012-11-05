@@ -69,10 +69,9 @@
 				<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
 				-->
 				<block type="checkout/links" name="checkout_cart_link">
-					<action method="addCartLink"><label>Cart</label></action>
+					<action method="addCartLink"><title>Cart</title></action>
 					<!--<action method="addCheckoutLink"></action>-->
 				</block>
-				|
 				<action method="addLink" translate="label title" module="customer"><label>Account &amp; Help</label><url helper="customer/getAccountUrl"/><title>Account &amp; Help</title><prepare/><urlParams/><position>10</position></action>
 			</block>
 			
