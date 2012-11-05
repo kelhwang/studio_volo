@@ -1,0 +1,56 @@
+/* SLIDER */
+
+#slider {
+	position: relative;
+	width: 960px;
+	height: 480px;
+}
+#slider ul {
+	position: relative;
+	width: 960px; /* overwritten in js */
+	height: 480px;
+}
+#slider li, #slider .prevcover, #slider .nextcover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px; 
+	height: 480px;
+	display: none;
+}
+#slider li#first, .js #slider li {
+	display: block;
+}
+#slider li.one {
+	left: -1920px;
+}
+#slider li.two, #slider .prevcover {
+	left: -960px;
+}
+#slider li.three, #slider .nextcover {
+	left: 960px;
+}
+#slider li.four {
+	left: 1920px;
+}
+
+#slider .prevcover, #slider .nextcover {
+	background: #FFF;
+	display: block;
+}
+#slider .prev, #slider .next {
+	position: absolute;
+	top: 217px;
+	left: -38px;
+	width: 28px;
+	height: 47px;
+	background: url(../images/volo/prev.png) no-repeat;
+	text-indent: -9000em;
+	z-index: 10;
+	display: none;
+}
+#slider .next {
+	left: auto;
+	right: -38px;
+	background: url(../images/volo/next.png) no-repeat;
+}
