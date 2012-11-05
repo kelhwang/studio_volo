@@ -223,6 +223,9 @@ body {
 #header-wrap2 #secondary, #header-wrap2 #tertiary {
 	top: 13px;
 }
+#tertiary li:last-child a:before {
+	content:" | ";
+} 
 
 /* MENU */
 

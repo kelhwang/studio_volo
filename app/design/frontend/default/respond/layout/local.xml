@@ -65,6 +65,7 @@
 		<reference name="header">
 		
 			<block type="page/template_links" name="top.links.custom" as="topLinksCustom">
+				<action method="addLink" translate="label title" module="customer"><label>Account &amp; Help</label><url helper="customer/getAccountUrl"/><title>Account &amp; Help</title><prepare/><urlParams/><position>10</position></action>
 				<!--
 				<block type="wishlist/links" name="wishlist_link"/>
 				<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
@@ -73,8 +74,12 @@
 					<action method="addCartLink"><title>Cart</title></action>
 					<!--<action method="addCheckoutLink"></action>-->
 				</block>
-				<action method="addLink" translate="label title" module="customer"><label>Account &amp; Help</label><url helper="customer/getAccountUrl"/><title>Account &amp; Help</title><prepare/><urlParams/><position>10</position></action>
 			</block>
+			
+			<block type="page/template_links" name="top.links.custom2" as="topLinksCustom2">
+				<action method="addLink" translate="label title” module="customer"><label>About Us</label><url>about</url><title>About Us</title><prepare/><urlParams/><position>10</position></action> 
+				<action method="addLink" translate="label title” module="customer"><label>Invite friends, share $40</label><url>invite</url><title>Invite friends, share $40</title><prepare/><urlParams/><position>20</position></action> 
+			</block>		
 			
 			<block type="directory/currency" name="top_currency" template="directory/currency.phtml"/>
 			<block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml" />
