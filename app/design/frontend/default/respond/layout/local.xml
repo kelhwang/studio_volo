@@ -69,17 +69,16 @@
 				<action method="addLinkBlock"><blockName>wishlist_link</blockName></action>
 				-->
 				<block type="checkout/links" name="checkout_cart_link">
-					<action method="addCartLink"></action>
-					<!--
-					<action method="addCheckoutLink"></action>
-					-->
+					<action method="addCartLink">"><label>test: addCartLink</label></action>
+					<action method="addCheckoutLink"><label>test: addCheckoutLink</label></action>
 				</block>
 				<action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position></action>
 			</block>
 			
 			<block type="directory/currency" name="top_currency" template="directory/currency.phtml"/>
 			<block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml" />
-			
+			<remove name="top.search"></remove>
+			  
 			<reference name="top.bar">
 				<action method="unsetChild"><alias>topSearch</alias></action>
 			</reference>
