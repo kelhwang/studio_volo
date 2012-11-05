@@ -35,5 +35,6 @@
 <?php if($_menu): ?>
 <ul id="menu">
 	<?php echo $_menu ?>
+	<?php echo $this->getChildHtml('menuExtra') ?>
 </ul>
 <?php endif ?>
