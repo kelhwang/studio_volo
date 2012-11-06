@@ -13,7 +13,7 @@ $j(document).ready(function() {
 	/* STICKY HEADER */
 	
 	$j('#menu').waypoint(function(event, direction) {
-		if (direction === 'down') {		
+		if (direction === 'down' && $j('#header-wrap2').length <= 0) {	
 			$j('#header-wrap').clone().attr('id', 'header-wrap2').insertAfter($j("#header-wrap")).stop(true,true).fadeIn(250);
 		}
 		else {

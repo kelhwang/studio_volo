@@ -501,9 +501,8 @@ px      40    100    160    220    280    340    400    460    520    580   640 
 
 /* Baseline images overlay 
 
-.page {  background: url("../images/baseline18px.png") repeat scroll 0 0 #FFF;  }*/
-
-.main { padding: 18px 0; }
+.page {  background: url("../images/baseline18px.png") repeat scroll 0 0 #FFF;  }
+.main { padding: 18px 0; }*/
 
 .col2-left-layout .col-left { float: left; width: 220px; }
 .col2-left-layout .col-main  { float: right; width: 700px; }
@@ -2317,22 +2316,3 @@ Inlined to avoid required HTTP connection: h5bp.com/r
  .page-print .data-table .cart-tax-total { background-position:100% -54px; }
  .page-print .data-table .cart-tax-info { display:block !important; }
 }
-
-#newsletter-popupbutton {
-	position: fixed;
-	top: 250px;
-	left: 0;
-	height: 40px;
-	width: 100px;
-	font-size: 0.1em;
-	text-align: left;
-	overflow: hidden;
-	z-index: 9999;
-	color : #FFFFFF;
-	background-color: #000000;
-}
-#newsletter-popupbutton a{
-	color: #FFFFFF;
-	font-size: 16px;
-}
-

@@ -29,7 +29,7 @@
 ?>
 
 <div id="header-wrap">
-<div id="header"">
+<div id="header">
 	<h1><a href="<?php echo $this->getUrl('') ?>"><?php echo  Mage::app()->getWebsite()->getName(); ?></a></h1>
 	
 	<div id="secondary">
@@ -63,3 +63,4 @@
 
 <div id="wrapper">
 	<?php echo $this->getChildHtml('topMenu') ?>
+    <?php echo $this->getChildHtml('topBar') ?>
