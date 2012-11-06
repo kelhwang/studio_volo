@@ -76,6 +76,10 @@
 				</block>
 			</block>	
 			
+			<block type="cms/block" name="header_links">
+				<action method="setBlockId"><block_id>header_links</block_id></action>
+			</block>
+			
 			<block type="directory/currency" name="top_currency" template="directory/currency.phtml"/>
 			<block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml" />
 			
