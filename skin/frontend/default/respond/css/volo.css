@@ -1,0 +1,1042 @@
+/**************************************************
+RESET
+Based on work by Eric Meyer:  http://meyerweb.com/eric/tools/css/reset/index.html
+ **************************************************/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	min-height: 100%;
+
+	-ms-overflow-x: hidden;
+	overflow-x: hidden;
+}
+
+:focus {
+	outline: 0;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption,th,td {
+	text-align: left;
+	font-weight: normal;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: "";
+}
+
+blockquote,q {
+	quotes: "" "";
+}
+
+img {
+	max-width: 100%;
+	-ms-interpolation-mode: bicubic;
+}
+
+input[type="submit"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,button::-moz-focus-inner {
+	padding: 0;
+	border: 0 none;
+	
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input,textarea,button,select {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	font-size: 100%;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+button,html input[type="button"],input[type="reset"],input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+/**************************************************
+MICRO CLEARFIX
+http://nicolasgallagher.com/micro-clearfix-hack/
+ **************************************************/
+/* For modern browsers */
+.cf:before,.cf:after {
+	content: "";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+	*zoom: 1;
+}
+
+/**************************************************
+TYPOGRAPHY
+ **************************************************/
+ 
+body {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 21px;
+}
+input,textarea,button,select {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #252525;
+}
+
+input {
+	font-size: 13px;
+}
+
+::-webkit-input-placeholder {
+	color: #949494;
+	font-style: italic;
+}
+
+:-moz-placeholder {
+	color: #949494;
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+	color: #252525;
+}
+
+a:hover,a:active {
+	text-decoration: underline;
+	color: #252525;
+}
+
+strong,b {
+	font-weight: bold;
+}
+
+em,i {
+	font-style: italic;
+}
+
+/**************************************************
+LAYOUT
+ **************************************************/
+ 
+body {
+	background: #FFF;
+	text-align: center;
+}
+
+#wrapper {
+	padding: 86px 0 0;
+	margin: 0 auto;
+	width: 960px;
+	text-align: left;
+}
+
+/* HEADER */
+#header-wrap,#header-wrap2 {
+	position: absolute;
+	left: 0;
+	height: 70px;
+	width: 100%;
+	background: #FFF;
+	z-index: 10;
+}
+
+#header-wrap2 {
+	position: fixed;
+
+	-webkit-box-shadow: 0 4px 8px #ccc;
+	box-shadow: 0 4px 8px #ccc;
+	-webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	
+	height: 39px;
+	display: none;
+}
+
+#header {
+	position: relative;
+	margin: 0 auto;
+	width: 960px;
+	height: 50px;
+}
+
+#header-wrap #header {
+	padding: 31px 0 0;
+}
+
+#header h1 {
+	margin: 0 auto;
+	padding: 9px 0 0;
+	height: 32px;
+}
+
+#header-wrap2 #header h1 {
+	padding: 4px 0 0;
+}
+
+#header h1 a {
+	display: block;
+	margin: 0 auto;
+	padding: 32px 0 0;
+	width: 121px;
+	height: 0;
+	background: url(../images/volo/logo.png) no-repeat;
+	overflow: hidden;
+	font-size: 0.1em;
+}
+
+#secondary,#tertiary {
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 25px;
+	font-size: 10px;
+	color: #4a4a4a;
+	border-bottom: 1px solid #000;
+	width: 480px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+#tertiary {
+	left: auto;
+	right: 0;
+	text-align: right;
+}
+
+#secondary a,#tertiary a {
+	color: #4a4a4a;
+}
+
+#secondary a.invite {
+	margin-left: 38px;
+	color: #f54828;
+}
+
+#secondary a:hover,#tertiary a:hover {
+	text-decoration: underline;
+}
+
+#header-wrap2 #secondary, #header-wrap2 #tertiary {
+	top: 13px;
+	line-height: 12px;
+	border-bottom: 0;
+	width: auto !important;
+}
+ #header-wrap2 #tertiary {
+	float: right;
+}
+
+
+#tertiary li:last-child:before {
+	content: " | ";
+}
+
+/* MENU */
+#menu {
+	position: relative;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	height: 29px;
+	z-index: 5;
+}
+
+/* level one */
+#menu li {
+	float: left;
+	zoom: 1;
+	position: relative;
+}
+
+#menu a:hover,#menu a:active {
+	color: #838383;
+	text-decoration: none;
+}
+
+#menu li a {
+	display: block;
+	padding: 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 29px;
+	text-align: center;
+	color: #4a4a4a;
+}
+
+#menu li.hover a {
+	color: #949494;
+}
+
+#menu li.hover a:hover,#menu li.hover a:active {
+	text-decoration: none;
+}
+
+#menu li:last-child a {
+	font-family: Pacifico, "Open Sans", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+/*
+#menu li:nth-child(1) a  {
+	
+width:  44px;
+	
+}
+
+#menu li:nth-child(2) a  {
+	
+width:  51px;
+	
+}
+
+#menu li:nth-child(3) a  {
+	
+width:  51px;
+	
+}
+
+#menu li:nth-child(4) a  {
+	
+width:  68px;
+	
+}
+
+#menu li:nth-child(5) a  {
+	
+width:  56px;
+	
+}
+
+#menu li:nth-child(6) a  {
+	
+width:  77px;
+	
+}
+
+#menu li:nth-child(7) a  {
+	
+width:  80px;
+	
+}
+
+ */
+#menu li:nth-child(1) a {
+	width: 120px;
+}
+
+#menu li:nth-child(2) a {
+	width: 127px;
+}
+
+#menu li:nth-child(3) a {
+	width: 127px;
+}
+
+#menu li:nth-child(4) a {
+	width: 144px;
+}
+
+#menu li:nth-child(5) a {
+	width: 132px;
+}
+
+#menu li:nth-child(6) a {
+	width: 153px;
+}
+
+#menu li:nth-child(7) a {
+	width: 156px;
+}
+
+/* level two */
+#menu ul {
+	width: 138px;
+	padding: 0;
+	border: 1px solid #f2f2f2;
+	border-bottom: 1px solid #000;
+	border-top: 0;
+	position: absolute;
+	top: 100%;
+	left: 27px; 
+	/* left padding for parent is 38 */
+	background: #FFF;
+	display: none;
+}
+
+#menu li:last-child ul {
+	left: auto;
+	right: 4px; /* 1 remainder */
+}
+
+#menu ul li {
+	float: none;
+	padding: 0;
+}
+
+#menu ul li a {
+	display: block;
+	padding: 0 10px !important;
+	width: 100% !important;
+	font: normal normal normal 12px/23px "Open Sans", Arial, Helvetica, sans-serif !important;
+	text-transform: none !important;
+	letter-spacing: 0 !important;
+	text-align: left;
+}
+
+#menu li.hover ul li a {
+	color: #202020;
+}
+
+#menu li.hover ul li a:hover,#menu li.hover ul li a:active {
+	text-decoration: underline;
+}
+
+.no-js #menu ul {
+	display: block;
+	visibility: hidden;
+}
+
+.no-js #menu li:hover > ul {
+	visibility: visible;
+}
+
+/* level three, not used */
+#menu ul ul {
+	left: 100%;
+	top: 0;
+}
+
+/* FOOTER */
+#footer-wrap {
+	clear: both;
+	background: #f9f9f9;
+	margin-top: 30px;
+}
+
+#footer {
+	margin: 0 auto;
+	width: 960px;
+	text-align: left;
+}
+
+#subscribe {
+	padding: 15px 0;
+	border-bottom: 1px dotted #d9d9d9;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #4a4a4a;
+	text-align: center;
+}
+
+#newsletter-area {
+	float: left;
+	border-right: 1px dotted #d9d9d9;
+	width: 480px;
+	height: 65px;
+}
+
+#newsletter-area input[type=text] {
+	border: 1px solid #d9d9d9;
+	border-right: 0;
+	width: 200px;
+	padding: 3px 0 3px 5px;
+	height: 17px;
+	line-height: 17px;
+	background: #FFF;
+
+	-webkit-box-shadow: inset 2px 5px 10px #f6f6f6;
+	box-shadow: inset 2px 5px 10px #f6f6f6;
+
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+#newsletter-area input[type=text]:focus {
+	outline: none;
+
+	-webkit-box-shadow: inset 2px 5px 10px #fff;
+	box-shadow: inset 2px 5px 10px #fff;
+}
+
+#newsletter-area input[type=submit] {
+	width: 50px;
+	text-align: center;
+	height: 25px;
+	line-height: 23px;
+	background: #e9e9e9;
+	border: 1px solid #d9d9d9;
+
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	-o-transition: all 0.15s ease-out;
+	-ms-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 3px 2px rgba(255,255,255,.22), inset 0 -3px 2px rgba(0,0,0,.02), inset 0 20px 10px rgba(255,255,255,.12);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 3px 2px rgba(255,255,255,.22), inset 0 -3px 2px rgba(0,0,0,.02), inset 0 20px 10px rgba(255,255,255,.12);
+	text-shadow: 0 1px rgba(255,255,255,0.7);
+}
+
+#newsletter-area input[type=submit]:hover {
+	background: #f6f6f6;
+}
+
+#newsletter-area input[type=submit]:active {
+	background: #e9e9e9;
+
+	-webkit-box-shadow: inset 0 -2px 1px rgba(255,255,255,0.2), inset 0 3px 1px rgba(0,0,0,0.1);
+	box-shadow: inset 0 -2px 1px rgba(255,255,255,0.2), inset 0 3px 1px rgba(0,0,0,0.1);
+}
+
+#follow {
+	float: right;
+	width: 479px;
+	height: 65px;
+}
+
+#links {
+	padding: 15px 0 30px;
+}
+
+#links .col {
+	float: left;
+	padding: 0 5px;
+	width: 230px;
+}
+
+#links .heading {
+	line-height: 30px;
+	color: #949494;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#links ul {
+	line-height: 23px;
+}
+
+#links p {
+	line-height: 25px;
+}
+
+#links .col:last-child a {
+	text-decoration: underline;
+}
+
+#links .col:last-child a:hover,#links .col:last-child a:active {
+	color: #838383;
+}
+
+#meta {
+	border-top: 1px solid #949494;
+	width: 960px;
+	margin: 0 auto;
+	height: 35px;
+	line-height: 30px;
+	font-size: 11px;
+}
+
+#terms {
+	float: left;
+}
+
+#terms a {
+	margin-right: 19px;
+}
+
+#address {
+	float: right;
+}
+
+/**************************************************
+HOMEPAGE
+ **************************************************/
+/* SLIDER */
+#slider {
+	position: relative;
+	width: 960px;
+	height: 480px;
+}
+
+#slider ul {
+	position: relative;
+	width: 960px; /* overwritten in js */
+height: 480px;
+}
+
+#slider li,#slider .prevcover,#slider .nextcover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 480px;
+	display: none;
+}
+
+#slider li#first,.js #slider li {
+	display: block;
+}
+
+#slider li.one {
+	left: -1920px;
+}
+
+#slider li.two,#slider .prevcover {
+	left: -960px;
+}
+
+#slider li.three,#slider .nextcover {
+	left: 960px;
+}
+
+#slider li.four {
+	left: 1920px;
+}
+
+#slider .prevcover,#slider .nextcover {
+	background: #FFF;
+	display: block;
+}
+
+#slider .prev,#slider .next {
+	position: absolute;
+	top: 217px;
+	left: -38px;
+	width: 28px;
+	height: 47px;
+	background: url(../images/volo/prev.png) no-repeat;
+	text-indent: -9000em;
+	z-index: 10;
+	display: none;
+}
+
+#slider .next {
+	left: auto;
+	right: -38px;
+	background: url(../images/volo/next.png) no-repeat;
+}
+
+/* VALUE PROPOSITION */
+#value {
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+	height: 83px;
+	text-align: center;
+}
+
+#value h2 {
+	font: bold 30px/83px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+/* PROMOTIONS */
+#promotions .col {
+	float: left;
+	padding: 10px 5px 5px;
+	width: 310px;
+}
+
+#promotions .promo img {
+	float: left;
+	margin: 0 0 5px;
+	border: 1px solid #f0f0f0;
+	border-right: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+/* SOCIAL */
+#social {
+	clear: both;
+	padding: 15px 0;
+	border-top: 1px solid #000;
+}
+
+#social .col {
+	float: left;
+	padding: 5px 5px 0;
+	width: 310px;
+}
+
+#social .social img {
+	float: left;
+}
+
+/* SUBSCRIBE POPUP */
+#newsletter-popupbutton {
+	position: fixed;
+	top: 180px;
+	left: 0;
+	width: 42px;
+	height: 71px;
+	z-index: 9999;
+}
+
+#newsletter-popupbutton a {
+	display: block;
+	padding: 71px 0 0;
+	width: 42px;
+	height: 0;
+	background: url(../images/volo/subscribe.png);
+	font-size: 0.1em;
+	overflow: hidden;
+}
+
+#newsletter-popupbutton a:hover {
+	background-position: 0 100%;
+}
+#newsletter-subscribe-popup {
+	text-align: left;
+	padding: 15px;
+	height: 335px;
+	background: url(../images/volo/popup-bg.jpg) no-repeat 0 50%;
+}
+
+#newsletter-validate-detail {
+	float: right;
+	padding: 0 10px 0 25px;
+	width: 440px;
+	height: 333px;
+	border-left: 1px dotted #d9d9d9;
+}
+.form-subscribe {
+	height: 333px;
+	padding: 0 5px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.form-subscribe-header {
+	padding: 71px 0 0;
+	font: bold 30px/40px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+	color: #4a4a4a;
+}
+.form-subscribe-body {
+	padding: 0 0 20px;
+	font-size: 16px;
+}
+.form-subscribe label {
+	font: bold 16px/30px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+}
+.form-subscribe .input-box {
+	position: relative;
+}
+.form-subscribe input, .form-subscribe .input-text {
+	float: left;
+	width: 326px !important;
+	padding: 10px 5px 10px !important;
+}
+.form-subscribe button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 90px;
+	padding: 0 !important;
+	height: 40px !important;
+	line-height: 38px !important;
+	text-align: center;
+	font: bold 16px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+.form-subscribe .validation-advice {
+
+}
+
+/*
+
+    <div class="form-subscribe">
+    <div class="form-subscribe-header">Be the first to know!</div>
+    <div class="form-subscribe-body">Get exclusive deals straight to your inbox</div>
+        <label for="newsletter">Email:</label>
+        <div class="input-box">
+           <input type="text" name="email" id="newsletter" title="Sign up for our newsletter" class="input-text required-entry validate-email" />
+        </div>
+        <button type="submit" title="Submit" class="button"><span><span>Submit</span></span></button>
+		*/
+
+
+/**************************************************
+CATEGORIES & PRODUCTS
+**************************************************/
+
+#breadcrumbs {
+	padding: 5px 5px 10px;
+	text-transform: none;
+	line-height: 30px;
+	font-size: 11px;
+	color: #949494;
+}
+#breadcrumbs a {
+	color: #949494;	
+}
+#breadcrumbs span {
+	padding: 0 5px;
+}
+
+.category-title h1 {
+	padding: 0 0 20px 5px;
+	font: bold 36px/36px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+/*
+#category li {
+	float: left;
+	margin: 0 0 15px;
+	padding: 0 5px;
+	width: 310px;
+	text-align: center;
+	line-height: 15px;
+}
+#category .ro {
+	display: block;
+	margin: 0 0 10px;
+	width: 310px;
+	height: 192px;
+	position: relative;
+}
+#category .ro img {
+	position: absolute;
+	width: 310px;
+	height: 192px;
+	top: 0;
+	left: 0;
+}
+#category .ro img:first-child {
+	padding: 1px;
+	width: 308px;
+	height: 190px;
+	background: url(../images/hovercat.png);
+}
+#category li a:hover, #category li a:active {
+	text-decoration: none;
+}
+#category li a:hover .name, #category li a:active .name {
+	text-decoration: underline
+}
+#category li .oldprice {
+	display: block;
+	text-decoration: line-through !important;
+	color: #949494;
+}
+#category li .newprice {
+	display: block;
+	font-size: 18px;
+	line-height: 24px;
+}
+*/
+
+
+
+
+
+
+
+
+
+/*
+ColorBox Core Style: 
+The following CSS is consistent between example themes and should not be altered.
+ */
+#colorbox,#cboxOverlay,#cboxWrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+#cboxOverlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+}
+
+#cboxMiddleLeft,#cboxBottomLeft {
+	clear: left;
+}
+
+#cboxContent {
+	position: relative;
+}
+
+#cboxLoadedContent {
+	overflow: auto;
+}
+
+#cboxTitle {
+	margin: 0;
+}
+
+#cboxLoadingOverlay,#cboxLoadingGraphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#cboxPrevious,#cboxNext,#cboxClose,#cboxSlideshow {
+	cursor: pointer;
+}
+
+.cboxPhoto {
+	float: left;
+	margin: auto;
+	border: 0;
+	display: block;
+	max-width: none;
+}
+
+.cboxIframe {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: 0;
+}
+
+#colorbox,#cboxContent,#cboxLoadedContent {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/*
+User Style: 
+Change the following styles to modify the appearance of ColorBox.  They are
+ordered & tabbed in a way that represents the nesting of the generated HTML.
+ */
+#cboxOverlay {
+	background: #FFF;
+}
+
+#cboxContent {
+	margin-top: 32px;
+	overflow: visible;
+}
+
+.cboxIframe {
+	background: #fff;
+}
+
+#cboxError {
+	padding: 50px;
+	border: 1px solid #ccc;
+}
+
+#cboxLoadedContent {
+	background: #FFF;
+
+	-webkit-box-shadow: 2px 2px 10px #000;
+	box-shadow: 2px 2px 10px #000;
+	-webkit-box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+#cboxLoadingGraphic {
+	background: url(../images/volo/loading.gif) no-repeat 50% 50%;
+}
+
+#cboxLoadingOverlay {
+	background: #FFF;
+}
+
+#cboxTitle {
+	position: absolute;
+	top: -22px;
+	left: 0;
+	color: #000;
+}
+
+#cboxCurrent {
+	position: absolute;
+	top: -22px;
+	right: 205px;
+	text-indent: -9999px;
+}
+
+#cboxClose {
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	background: url(../images/volo/close.png) no-repeat 0 0;
+}
+
+#cboxClose:hover {
+	background-position: 0 -30px;
+}
+
+/*
+#cboxPrevious, #cboxNext  {
+	text-indent: -9999px;
+	 width: 20px;
+	 height: 20px;
+	 position: absolute;
+	 top: -20px;
+	 background: url(images/controls.png) no-repeat 0 0;
+}
+
+#cboxPrevious {
+	background-position: 0px 0px;
+	 right: 44px;
+}
+
+#cboxPrevious:hover {
+	background-position: 0px -25px;
+}
+
+#cboxNext {
+	background-position: -25px 0px;
+	 right: 22px;
+}
+
+#cboxNext:hover {
+	background-position: -25px -25px;
+}
+
+ */

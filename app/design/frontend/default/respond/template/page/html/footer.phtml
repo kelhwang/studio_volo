@@ -24,10 +24,34 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="footer-container">
-    <div class="footer">
-            <?php echo $this->getChildHtml('footer_block') ?>
-    </div>
-	<address><?php echo $this->getCopyright() ?></address>
-</div>
 
+</div><!-- end #wrapper -->
+
+<div id="footer-wrap">	
+	<div id="footer">
+	
+		<div id="subscribe" class="cf">
+			<div id="newsletter-area">
+				<p>Our newsletter, join and get $10 off<br />
+				<input type="text" value="" placeholder="enter email" /><input type="submit" value="Go &raquo;" />
+			</div>
+			<div id="follow">
+				Follow us and get to know us better<br />
+				<div class="fb-like" data-href="http://www.facebook.com" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+			</div>
+		</div>
+		
+		<div id="links" class="cf">
+			<?php echo $this->getChildHtml('footer_cols') ?>
+		</div>	
+	</div>
+	
+	<div id="meta">
+		<div id="terms">
+			<?php echo $this->getChildHtml('footer_links') ?>
+		</div>
+		<div id="address">
+			<?php echo $this->getCopyright() ?>
+		</div>
+	</div>
+</div>
