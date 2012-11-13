@@ -1040,3 +1040,72 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
 }
 
  */
+ 
+ /**************************************************
+INVITE FRIENDS
+**************************************************/
+
+#invite {
+	text-align: center;
+}
+#invite h2 {
+	padding: 30px 0;
+	font: bold 30px/30px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+}
+#earn {
+	padding: 0 0 30px;
+}
+#earn h3 {
+	font: bold 18px/20px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+}
+#earn .you {
+	float: left;
+	border-right: 1px dotted #949494;
+	width: 480px;
+}
+#earn .friend {
+	float: right;
+	width: 479px;
+}
+#earn h3 {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+#earn p, #earn #alogin {
+	padding: 21px 0;
+}
+
+#earn #alogin {
+	display: inline-block;
+	width: auto;
+	margin: 0 auto;
+	background: #f57c22;
+	color: #FFF;
+	font-size: 1.5em;
+	line-height: 1.75em;
+	padding: 0 12px;
+}
+
+#earn .links{
+	margin: 0 auto !important;
+}
+
+#earn .links li{
+	width: 200px !important;
+}
+
+#earn ul {
+	padding: 1em 0 0 37px;
+}
+#earn li {
+	float: left;
+	width: 129px;
+	padding: 0 10px 0 0;
+}
+#earn li img {
+	border: 1px solid #d5d6d6;
+}
+#earn li p {
+	padding: 0.5em 0 0.25em;
+	line-height: 19px;
+}
