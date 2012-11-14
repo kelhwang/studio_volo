@@ -740,7 +740,6 @@ height: 480px;
 	padding: 0 10px 0 25px;
 	width: 440px;
 	height: 333px;
-	border-left: 1px dotted #d9d9d9;
 }
 .form-subscribe {
 	height: 333px;
@@ -866,6 +865,277 @@ CATEGORIES & PRODUCTS
 	line-height: 24px;
 }
 */
+
+
+#product {
+	position: relative;
+}
+#photo {
+	height: 500px;
+}
+#thumbs {
+	padding: 10px 0;
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+}
+#thumbs li {
+	float: left;
+	padding: 1px 6px 1px 1px;
+	width: 63px;
+	height: 34px;
+}
+#thumbs li.current {
+	background: url(../images/volo/hoverprod.png) no-repeat;
+}
+#thumbs li:last-child {
+	padding: 1px;
+}
+#thumbs li img {
+	border: 1px solid #e0e0e0;
+	width: 61px;
+	height: 32px;
+}
+#thumbs .social {
+	float: right;
+	padding: 6px 0 0;
+}
+#thumbs .social .social-button {
+	float: left;
+	width: 92px;
+}
+#thumbs .social .social-button:last-child {
+	float: left;
+	width: 61px;
+}
+
+#price {
+	position: absolute;
+	top: 309px;
+	right: 0;
+	width: 205px;
+	height: 105px;
+	padding: 10px 0 0;
+	background: url(../images/volo/pricebox.png);
+	text-align: center;
+}
+#price strong {
+	display: block;
+	font-size: 24px;
+	line-height: 30px;
+}
+#price .typical {
+	margin-bottom: 9px;
+	color: #4a4a4a;
+	line-height: 16px;
+}
+#price .typical span {
+	text-decoration: line-through;
+}
+#price input {
+	width: 176px;
+	height: 40px;
+	background: url(../images/volo/cartbutton.png) no-repeat;
+	color: #252525;
+	font: bold 24px/40px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+}
+#price input:hover {
+	background-position: 0 100%;
+}
+
+#related {
+	margin: 10px 0;
+}
+#related h3 {
+	line-height: 30px;
+	font-weight: bold;
+	color: #4a4a4a;
+}
+#related p {
+	line-height: 1.2em;
+}
+#related img {
+	margin-bottom: 10px;
+}
+#related .recommended {
+	float: left;
+	padding: 0 0 5px;
+	border-right: 1px dotted #d9d9d9;
+}
+#related .recommended li {
+	float: left;
+	width: 190px;
+	padding: 0 30px;
+	text-align: center;
+}
+#related .recommended li:first-child {
+	padding-left: 0;
+}
+#related .recommended li:last-child {
+	padding-right: 19px;
+}
+#related .recommended .old {
+	display: block;
+	text-decoration: line-through !important;
+	color: #949494;
+}
+#related .recommended .new {
+	font-size: 18px;
+	display: block;
+	font-size: 18px;
+	line-height: 24px;
+}
+#related .collection {
+	float: right;
+	width: 230px;
+	padding: 0 0 0 10px;
+}
+
+#details {
+	border-top: 1px solid #949494;
+}
+#details .features {
+	float: left;
+	width: 455px;
+	padding: 0 0 0 5px;
+}
+#details .features li {
+	padding: 30px 0 29px;
+	border-bottom: 1px dotted #f2f2f2;
+}
+#details .features li:last-child {
+	border-bottom: 0;
+}
+#details .features .desc {
+	float: left;
+	padding: 5px 0 0;
+	width: 228px;
+	line-height: 19px;
+}
+#details .features .desc h3 {
+	font: bold 18px/20px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+}
+#details .features .desc p {
+}
+#details .features .thumb {
+	float: right;
+	width: 213px;
+}
+#details .features .thumb img {
+	border: 1px solid #ccc;
+	width: 211px;
+	height: 110px;
+}
+#details .extra {
+	float: right;
+	margin: 30px 0 10px;
+	padding: 0 5px 0 21px;
+	border-left: 1px solid #e5e5e5;
+	width: 453px;
+}
+#details .extra .photo {
+	border: 7px solid #F2F2F2;
+    float: left;
+    margin: 0 12px 10px 0;
+	width: 67px;
+	height: 67px;
+}
+#details .extra .name {
+	font: 14px Pacifico, "Open Sans", Arial, Helvetica, sans-serif;
+}
+#details .extra h4 {
+	font-weight: bold;
+}
+#details .extra h4:nth-child(2) {
+	margin-top: 0;
+}
+#details .extra p, #details .extra ul {
+	margin-bottom: 21px;
+}
+#details .extra li {
+	list-style-type: disc;
+	margin-left: 15px;
+}
+#details a {
+	text-decoration: underline
+}
+#details a:hover, #details a:active {
+	color: #838383;
+}
+
+.specs h4 {
+	padding-left: 6px;
+	margin-left: -6px;
+	height: 23px;
+	background: #f2f2f2;
+}
+.specs dl, .specs p {
+	font-style: italic;
+	line-height: 30px;
+}
+.specs dt {
+	float: left;
+	width: 226px;
+}
+.specs dd {
+	float: left;
+	width: 227px;
+}
+
+/*
+ * jQuery Nivo Zoom v1.0
+ * http://nivozoom.dev7studios.com
+ *
+ * Copyright 2010, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * April 2010
+ */
+ 
+.nivoZoomHover {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:9;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+}
+.nivoLarge {
+	max-width: none !important;
+	width: auto !important;
+	height: auto !important;
+	border: 0 !important;
+	top: -85px !important;
+	left: -159px !important;
+	border: 10px solid #FFF !important;
+}
+
+
+a.nivoZoom img.nivoLarge {
+	-moz-box-shadow: 0 2px 8px #888;
+	-webkit-box-shadow: 0 2px 8px #888;
+	box-shadow: 0 2px 8px #888;
+	-moz-box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.nivoZoomHover {
+	background: url(../images/volo/zoom.png) no-repeat 50% 50%;
+	background: rgba(255,255,255,0.75) url(../images/volo/zoom.png) no-repeat 50% 50%;
+}
+.nivoZoomHover.loading {
+	background:url(../images/volo/loading.gif) no-repeat 50% 50%;
+	border:4px solid #000;
+	width:16px;
+	height:16px;
+	top:43%;
+	left:43%;
+	opacity:0.8;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
 
 
 

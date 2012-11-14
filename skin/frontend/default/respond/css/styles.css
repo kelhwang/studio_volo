@@ -431,19 +431,20 @@ a { outline: 0; }
 object, embed { outline: 0; }
 a             { text-decoration: none; color: inherit; text-transform: capitilize; color: #000; }
 a:hover       { text-decoration:underline; color: #d90202; }
-a:focus        { outline:0; color: #d90202; }
+a:focus        { outline:0; }
 
 /* Headings */
 
+/*
 h1, h2, h3, h4, h5, h6 { padding: 0; margin: 0 0 18px; clear: both; }
 
-h1									{ font-size: 36px;  line-height: 1; font-family: colaboratelightregular, tahoma, arial, sans-serif; } /* 36/36 */
-h2									{ font-size: 28px; line-height: 1.285714286; font-family: colaborateregular, tahoma, arial, sans-serif; }/* 36/28 */
-h3									{ font-size: 22px; line-height: 1.636363636; font-family: colaborateregular, tahoma, arial, sans-serif; }/* 36/22 */
-h4									{ font-size: 18px; line-height: 1; font-family: colaborateregular, tahoma, arial, sans-serif; }/* 18/18 */
-h5									{ font-size: 15px;  line-height: 1.2; font-family: colaborateregular, tahoma, arial, sans-serif; }/* 18/36 */
-h6									{ font-size: 13px; line-height: 1.384615385; font-family: colaborateregular, tahoma, arial, sans-serif; }/* 18/13 */
-
+h1									{ font-size: 36px;  line-height: 1; font-family: colaboratelightregular, tahoma, arial, sans-serif; } 
+h2									{ font-size: 28px; line-height: 1.285714286; font-family: colaborateregular, tahoma, arial, sans-serif; }
+h3									{ font-size: 22px; line-height: 1.636363636; font-family: colaborateregular, tahoma, arial, sans-serif; }
+h4									{ font-size: 18px; line-height: 1; font-family: colaborateregular, tahoma, arial, sans-serif; }
+h5									{ font-size: 15px;  line-height: 1.2; font-family: colaborateregular, tahoma, arial, sans-serif; }
+h6									{ font-size: 13px; line-height: 1.384615385; font-family: colaborateregular, tahoma, arial, sans-serif; }
+*/
 
 /* Table */
 table         { border:0; /*border-collapse:collapse;*/ border-spacing:0; empty-cells:show; font-size:100%; }

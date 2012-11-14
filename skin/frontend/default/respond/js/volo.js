@@ -122,4 +122,23 @@ $j(document).ready(function() {
 		}
 	}
 	
+	
+	
+	/****************************************
+	PRODUCT PAGE
+	****************************************/
+	
+	if($j('body').hasClass('catalog-product-view')) { 
+		
+		/* Gallery */
+		$j('#thumbs li a').bind('click', function() {
+			return false;
+		}).bind('hover', function() {
+			$j('#photo img').attr('src', $j(this).attr('href'));
+			$j('#thumbs li').removeClass('current');
+			$j(this).parent().addClass('current');
+		});
+	
+	}
+	
 });

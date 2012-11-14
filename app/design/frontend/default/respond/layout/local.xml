@@ -175,14 +175,13 @@ Category layered navigation layout
 			<action method="setTemplate"><template>page/1column.phtml</template></action>
 		</reference>
 		<reference name="head">
-			<action method="addItem"><type>skin_js</type><name>js/galleria-1.2.7.min.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/galleria.classic.min.js</name></action>
-			<action method="addItem"><type>skin_css</type><name>css/galleria.classic.css</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/jquery.nivo.zoom.pack.js</name></action>
 		</reference>
 		<reference name="product.info">
 			<action method="unsetChild">
 				<name>info_tabs</name>
 			</action>
+			<!--
 			<block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml" >
 				<action method="addTab" translate="title" module="catalog">
 					<alias>description</alias>
@@ -208,26 +207,25 @@ Category layered navigation layout
 					<block>tag/product_list</block>
 					<template>tag/list.phtml</template>
 				</action>
-				<!-- neat trick to include a CMS Static block directly in the tab -->
 				<action method="addTab" translate="title" module="catalog">
 					<alias>shipping</alias>
 					<title>Shipping Costs</title>
 					<block>cms/block</block>
 					<template>null</template>
 				</action>
-				<!-- define the CMS block ID for the shipping info tab -->
 				<block type="cms/block" name="product.info.tabs.shipping" as="shipping">
 					<action method="setBlockId"><block_id>tab-product-shipping</block_id></action>
 				</block>
 			</block>
+			-->
+			<block type="catalog/product_list_related" name="catalog.product.related" template="catalog/product/list/related.phtml"/>
 		</reference>
+		<!--
 		<reference name="upsell_products">
-            <action method="setColumnCount"><columns>5</columns></action>
-            <action method="setItemLimit"><type>upsell</type><limit>5</limit></action>
+            <action method="setColumnCount"><columns>3</columns></action>
+            <action method="setItemLimit"><type>upsell</type><limit>3</limit></action>
         </reference>
-        <reference name="left">
-            <block type="catalog/product_list_related" name="catalog.product.related" before="-" template="catalog/product/list/related.phtml"/>
-        </reference>
+		-->
 	 </catalog_product_view>	
 	 
 <!-- 
@@ -236,7 +234,6 @@ Category layered navigation layout
 	
 	<cms_index_index>
 		<reference name="head">
-			<action method="addItem"><type>skin_js</type><name>js/jquery.flexslider.js</name></action>
 		</reference>
     </cms_index_index>
 	
