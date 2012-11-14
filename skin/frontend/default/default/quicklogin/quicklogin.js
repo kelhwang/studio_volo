@@ -4,10 +4,16 @@ var checkurl = URL + "customer/account/signupformpopup/";
 			var vis = (box.checked) ? "block" : "none";
 			document.getElementById(it).style.display = vis;
 			}
+			
+			jQuery('.alogin').click(function(){
+				 TINY.box.show({url: checkurl ,width:620,height:100,opacity:20,topsplit:10});
+			});
+			
+			
 	        if($('alogin')){
 				T$('alogin').onclick = function()
 				{
-                TINY.box.show({url: checkurl ,width:620,height:100,opacity:20,topsplit:10});
+                //TINY.box.show({url: checkurl ,width:620,height:100,opacity:20,topsplit:10});
 				
 				}
 			} 
@@ -42,7 +48,13 @@ var checkurl = URL + "customer/account/signupformpopup/";
 					if (response.success){
 					   //alert('Successfully Loggedin');
 					   redirectTime = "1";
-                       redirectURL = URL+"invite";
+					   var path=window.location.pathname;
+					   path=path.replace('/index.php/','');		
+						if (path=='checkout/cart/')
+						{
+							path='checkout/onepage/';
+						}
+                       redirectURL = URL+path;
 					   setTimeout("location.href = redirectURL;",redirectTime);
 					}else{
 					    if ((typeof response.message) == 'string') {
