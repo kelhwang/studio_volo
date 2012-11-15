@@ -1,3 +1,111 @@
+<div id="login-wrap">
+
+	<h3>Already a Customer?</h3>
+
+	<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+	
+	<form action="#" method="post" id="login-form" class="frm-login">
+		<p>
+			<label for="email">Email</label>
+			<input name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="email" type="text" class="input-text required-entry" title="<?php echo $this->__('Email Address') ?>" />
+		</p>
+		<p>
+			<label for="pass">Password</label>
+			<input name="login[password]" type="password" class="input-text required-entry validate-password" id="pass" title="<?php echo $this->__('Password') ?>" />
+		</p>
+		<p>
+			<button class="action-btn" type="submit" name="send" id="send2"><?php echo $this->__('Login') ?></button>
+		</p>
+		<p class="forgot">
+			<a href="#" onclick="$j('#login-form').stop(true,true).slideUp(); $j('#fpass').stop(true,true).slideDown(); return false;">forgot password?</a>
+		</p>
+	</form>
+	
+	<div style="display:none;" id="fpass" class="cf">
+		<form class="for-pass" id="forgot-form" method="post" action="<?php echo $this->getUrl('customer/account/ajaxForgotPassword/') ?>">
+			<p style="padding-left: 30px;"><?php echo $this->__('Please enter your email to get the password') ?></p>
+			<p>
+				<label class="required" for="email"><?php echo $this->__('Email') ?></label>
+				<input type="text" title="Email Address" class="input-text required-entry validate-email" id="forgot_email" value="" name="forgotemail">
+			</p>		
+			<p>
+				<button type="button" id="send3" name="send3" class="action-btn" onclick="return forgetpass();"><span><?php echo $this->__('Submit') ?></span></button>
+			</p>
+			<p class="forgot">
+				<a href="#" onclick="$j('#login-form').stop(true,true).slideDown(); $j('#fpass').stop(true,true).slideUp(); return false;">return to login</a>
+			</p>
+		</form>
+	</div>
+		
+	<div class="signup cf">
+		<h4>Don't have an account?</h4>
+		<button type="button">Sign Up</button>
+	</div>
+
+</div>
+
+
+
+<div id="signup-wrap" style="display: none;">
+
+	<h3>Create an Account</h3>
+
+	<form action="#" method="post" id="regis-form" class="frm-regis">
+		<p>
+			<label for="firstname">First Name</label>
+			<input id="firstname" class="input-text required-entry" type="text" title="First Name" value="" name="firstname" />
+		</p>
+		<p>
+			<label for="lastname">Last Name</label>
+			<input id="lastname" class="input-text required-entry" type="text" title="Last Name" value="" name="lastname" />
+		</p>
+		<p>
+			<label for="email_address">Email</label>
+			<input id="email_address" class="input-text validate-email required-entry" type="text" title="Email Address" value="" name="email" />
+		</p>
+		<p>
+			<label for="password">Password</label>
+			<input id="password" class="input-text required-entry validate-password" type="password" title="Password" name="password"/>
+		</p>
+		<p>
+			<label for="confirmation">Confirm Password</label>
+			<input id="confirmation" class="input-text required-entry validate-password" type="password" title="Password" name="confirmation"/>
+		</p>
+		<p style="padding: 10px 0 5px;">
+			<input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed" />
+			<label style="width: auto; display: inline;" for="is_subscribed"><?php echo $this->__('Sign Up for Newsletter') ?></label>
+		</p>
+		<p class="terms">
+			By clicking Sign Up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+		</p>		
+		<p>
+			<button type="submit" class="action-btn">Sign Up</button>
+		</p>
+	</form>
+
+</div>
+
+
+<script type="text/javascript">
+	//<![CDATA[	
+	$j('#login-form').unbind('submit').submit(function(e) {
+		loginAjax();	
+		e.preventDefault();
+	});		
+	
+	$j('#regis-form').unbind('submit').submit(function(e) {
+		return registerAjax();
+		e.preventDefault();
+	});		
+	//]]>
+</script>
+
+
+
+
+
+<?php /*
+
 <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('quicklogin/quicklogin.css');?>" media="all" />
 <div id="quicklogin">
   <div class="quickbg" >
@@ -118,4 +226,4 @@
 </div>
 
 
-
+*/ ?>

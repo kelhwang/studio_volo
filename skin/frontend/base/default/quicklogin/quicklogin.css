@@ -27,19 +27,6 @@
     position: absolute;
     z-index: 2000;
 }
-/*
-#tinymask {
-    background: none repeat scroll 0 0 #fff;
-    display: none;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1500;
-	
-}
-*/
 #tinycontent {
     background: none repeat scroll 0 0 transparent;
 }
@@ -170,7 +157,7 @@ float: left;
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 0;
+    z-index: 1000;
 	opacity: 0.8 !important;
 }
 
@@ -178,5 +165,4 @@ float: left;
      background: url("images/preload.gif") no-repeat scroll 50% 50% #FFFFFF; 
    
     height: auto !important;
-    /*padding: 15px;*/
 }

@@ -9,7 +9,6 @@ var checkurl = URL + "customer/account/signupformpopup/";
 				{
                 TINY.box.show({url: checkurl ,width:620,height:100,opacity:20,topsplit:10});
 				
-				}
 			} 
 			 else if($('aclose')){
 				T$('aclose').onclick = function()

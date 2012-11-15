@@ -1,14 +1,33 @@
 var checkurl = URL + "customer/account/signupformpopup/";
 /* URL is define in header.phtml */
-	function showForgotSection (it, box) {
-			var vis = (box.checked) ? "block" : "none";
-			document.getElementById(it).style.display = vis;
-			}
 			
 			jQuery('.alogin').click(function(){
-				 TINY.box.show({url: checkurl ,width:620,height:100,opacity:20,topsplit:10});
+				 // TINY.box.show({url: checkurl ,width:620,height:100,opacity:20,topsplit:10});
 			});
 			
+			$j('#alogin').colorbox({
+				href:checkurl,
+				title:' ',
+				innerWidth: 410,
+				innerHeight: 285,
+				initialWidth: 410,
+				initialHeight: 285,
+				opacity: 0.75,
+				onComplete: function() {
+				
+					$j('#login-wrap .signup button').click(function() {
+						$j('#alogin').colorbox.resize({
+							innerWidth: 410,
+							innerHeight: 460,
+						});
+						
+						$j('#signup-wrap').show();
+						$j('#login-wrap').hide();
+						// show/hide
+					});
+				
+				}
+			});
 			
 	        if($('alogin')){
 				T$('alogin').onclick = function()
