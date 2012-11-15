@@ -100,7 +100,13 @@ var checkurl = URL + "customer/account/signupformpopup/";
 							if (response.success){
 							       //alert('Successfully Registered');
 								   redirectTime = "1";
-								   redirectURL = URL+'invite';
+								   var path=window.location.pathname;
+								   path=path.replace('/index.php/','');		
+									if (path=='checkout/cart/')
+									{
+										path='checkout/onepage/';
+									}
+								   redirectURL = URL+path;
 								   //redirectURL = URL + "customer/account";
 								   setTimeout("location.href = redirectURL;",redirectTime);
 							    }else{
