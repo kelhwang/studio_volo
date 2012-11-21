@@ -1,11 +1,8 @@
 var checkurl = URL + "customer/account/signupformpopup/";
 /* URL is define in header.phtml */
 			
-			jQuery('.alogin').click(function(){
-				 // TINY.box.show({url: checkurl ,width:620,height:100,opacity:20,topsplit:10});
-			});
-			
-			$j('#alogin').colorbox({
+
+			$j('.alogin').colorbox({
 				href:checkurl,
 				title:' ',
 				innerWidth: 410,
