@@ -66,7 +66,7 @@ var checkurl = URL + "customer/account/signupformpopup/";
 					   redirectTime = "1";
 					   var path=window.location.pathname;
 					   path=path.replace('/index.php/','');		
-						if (path=='checkout/cart/')
+						if ((path=='checkout/cart/')|| (path=='checkout/cart/#'))
 						{
 							path='checkout/onepage/';
 						}
@@ -118,7 +118,7 @@ var checkurl = URL + "customer/account/signupformpopup/";
 								   redirectTime = "1";
 								   var path=window.location.pathname;
 								   path=path.replace('/index.php/','');		
-									if (path=='checkout/cart/')
+									if ((path=='checkout/cart/') || (path=='checkout/cart/#'))
 									{
 										path='checkout/onepage/';
 									}
