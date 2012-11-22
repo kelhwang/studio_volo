@@ -29,9 +29,9 @@
 		<div class="recommended cf">
 			<h3>Recommended Items</h3>
 			<ul>
-				<?php foreach($this->getItems() as $_item): ?>
+				<?php foreach($this->getItems() as $key=>$_item): ?>
 					<li>
-						<p><a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(190,118); ?>" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a></p>
+						<p><a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(188,116); ?>" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a></p>
 						<p>
 							<a href="<?php echo $_item->getProductUrl() ?>">
 								<span class="name"><?php echo $this->htmlEscape($_item->getName()) ?></span>

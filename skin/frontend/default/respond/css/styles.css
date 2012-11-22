@@ -702,7 +702,7 @@ p.required { font-size:11px; float: left; color:#EB340A; }
 .breadcrumbs li strong { font-weight:bold; }
 
 /* Page Heading */
-.page-title { width:100%; overflow:hidden; margin:0 0 18px; }
+.page-title { width:100%; overflow:hidden; }
 .page-title h1,
 .page-title h2 { }
 .page-title .separator {   }

@@ -123,6 +123,24 @@ $j(document).ready(function() {
 	}
 	
 	
+	/****************************************
+	CATEGORY PAGE
+	****************************************/
+	
+	if($j('body').hasClass('catalog-category-view')) { 
+		
+		$j('#category a.ro').mouseenter(function() {
+			$j(this).children().last().stop(true.true).animate({
+				opacity: 0
+			}, 300);
+		}).mouseleave(function() {
+			$j(this).children().last().stop(true.true).animate({
+				opacity: 1
+			}, 150);
+		});
+	
+	}
+	
 	
 	/****************************************
 	PRODUCT PAGE
@@ -137,6 +155,12 @@ $j(document).ready(function() {
 			$j('#photo img').attr('src', $j(this).attr('href'));
 			$j('#thumbs li').removeClass('current');
 			$j(this).parent().addClass('current');
+		});
+	
+		$j('.recommended li a').mouseenter(function() {
+			$j(this).parents('li').addClass('hover');
+		}).mouseleave(function() {
+			$j(this).parents('li').removeClass('hover');
 		});
 	
 	}
