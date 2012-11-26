@@ -81,7 +81,7 @@ var checkurl = URL + "customer/account/signupformpopup/";
 					   setTimeout("location.href = redirectURL;",redirectTime);
 					}else{
 					    if ((typeof response.message) == 'string') {
-						alert(response.message);
+						$j('.errormsg').html(response.message);
 					    } 
 					    return false;
 					}
@@ -156,7 +156,7 @@ var checkurl = URL + "customer/account/signupformpopup/";
 								   setTimeout("location.href = redirectURL;",redirectTime);
 							    }else{
 								if ((typeof response.message) == 'string') {
-								alert(response.message);
+								$j('.errormsg').html(response.message);
 								} 
 								return false;
 							}
