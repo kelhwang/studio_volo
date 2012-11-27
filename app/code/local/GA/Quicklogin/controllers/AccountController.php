@@ -231,7 +231,7 @@ class GA_Quicklogin_AccountController extends Mage_Customer_AccountController
                     $url = Mage::getUrl('customer/account/forgotpassword');
 					$result['success'] = false;
 //					$result['message'] = $this->__('There is already an account with this email address. If you are sure that it is your email address.');
-$result['message'] = $this->__('If you are sure that it is your email address, <a href="#" onclick="$j(\'#signup-wrap\').stop(true,true).slideUp(); $j(\'#fpass\').stop(true,true).slideDown();$j(\'.errormsg\').html(\'\'); return false;">click here</a> to get your password and access your account.');
+$result['message'] = $this->__('There is already an account with this email address. If you are sure that it is your email address, <a href="#" onclick="$j(\'#signup-wrap\').stop(true,true).slideUp(); $j(\'#fpass\').stop(true,true).slideDown();$j(\'.errormsg\').html(\'\'); return false;">click here</a> to get your password and access your account.');
 
                 } else {
 					$result['success'] = false;
