@@ -17,10 +17,10 @@
 			<button class="action-btn" type="submit" name="send" id="send2"><?php echo $this->__('Login') ?></button>
 		</p>
 		<p class="forgot">
-			<a href="#" onclick="$j('#login-form').stop(true,true).slideUp(); $j('#fpass').stop(true,true).slideDown(); return false;">forgot password?</a>
+			<a href="#" onclick="$j('#login-wrap').stop(true,true).slideUp(); $j('#fpass').stop(true,true).slideDown(); return false;">forgot password?</a>
 		</p>
 	</form>
-	
+<!--	
 	<div style="display:none;" id="fpass" class="cf">
 		<form class="for-pass" id="forgot-form" method="post" action="<?php echo $this->getUrl('customer/account/ajaxForgotPassword/') ?>">
 			<p style="padding-left: 30px;"><?php echo $this->__('Please enter your email to get the password') ?></p>
@@ -36,7 +36,7 @@
 			</p>
 		</form>
 	</div>
-		
+-->		
 	<div class="signup cf">
 		<h4>Don't have an account?</h4>
 		<button type="button">Sign Up</button>
@@ -82,8 +82,43 @@
 			<button type="submit" class="action-btn">Sign Up</button>
 		</p>
 	</form>
+<!--
+	<div style="display:none;" id="fpass2" class="cf">
+                <form class="for-pass" id="forgot-form" method="post" action="<?php echo $this->getUrl('customer/account/ajaxForgotPassword/') ?>">
+                        <p style="padding-left: 30px;"><?php echo $this->__('Please enter your email to get the password') ?></p>
+                        <p>
+                                <label class="required" for="email"><?php echo $this->__('Email') ?></label>
+                                <input type="text" title="Email Address" class="input-text required-entry validate-email" id="forgot_email" value="" name="forgotemail">
+                        </p>
+                        <p>
+                                <button type="button" id="send3" name="send3" class="action-btn" onclick="return forgetpass();"><span><?php echo $this->__('Submit') ?></span></button>
+                        </p>
+                        <p class="forgot">
+                                <a href="#" onclick="$j('#regis-form').stop(true,true).slideDown(); $j('#fpass2').stop(true,true).slideUp(); return false;">return to sign up</a>
+                        </p>
+                </form>
+        </div>
 
+-->
 </div>
+
+
+ <div style="display:none;" id="fpass" class="cf">
+                <form class="for-pass" id="forgot-form" method="post" action="<?php echo $this->getUrl('customer/account/ajaxForgotPassword/') ?>">
+                        <p style="padding-left: 30px;"><?php echo $this->__('Please enter your email to get the password') ?></p>
+                        <p>
+                                <label class="required" for="email"><?php echo $this->__('Email') ?></label>
+                                <input type="text" title="Email Address" class="input-text required-entry validate-email" id="forgot_email" value="" name="forgotemail">
+                        </p>
+                        <p>
+                                <button type="button" id="send3" name="send3" class="action-btn" onclick="return forgetpass();"><span><?php echo $this->__('Submit') ?></span></button>
+                        </p>
+                        <p class="forgot">
+                                <a href="#" onclick="$j('#login-wrap').stop(true,true).slideDown(); $j('#fpass').stop(true,true).slideUp(); return false;">return to login</a>
+                        </p>
+                </form>
+        </div>
+
 
 
 <script type="text/javascript">
