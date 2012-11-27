@@ -111,7 +111,7 @@
                                 <input type="text" title="Email Address" class="input-text required-entry validate-email" id="forgot_email" value="" name="forgotemail">
                         </p>
                         <p>
-                                <button type="button" id="send3" name="send3" class="action-btn" onclick="return forgetpass();"><span><?php echo $this->__('Submit') ?></span></button>
+                                <button type="submit" class="action-btn"><?php echo $this->__('Submit') ?></button>
                         </p>
                         <p class="forgot">
                                 <a href="#" onclick="$j('#login-wrap').stop(true,true).slideDown(); $j('#fpass').stop(true,true).slideUp(); return false;">return to login</a>
@@ -131,7 +131,15 @@
 	$j('#regis-form').unbind('submit').submit(function(e) {
 		registerAjax();
 		e.preventDefault();
-	});		
+	});	
+
+
+	$j('#forgot-form').unbind('submit').submit(function(e) {
+                forgetpass();
+                e.preventDefault();
+        });
+
+	
 	//]]>
 </script>
 
