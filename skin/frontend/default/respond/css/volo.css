@@ -265,8 +265,11 @@ body {
 }
 
 
-#tertiary li:last-child:before {
+#tertiary li:before {
 	content: " | ";
+}
+#tertiary li:first-child:before {
+	content: "";
 }
 
 /* MENU */
@@ -1411,6 +1414,187 @@ INVITE FRIENDS
 #earn li p {
 	padding: 0.5em 0 0.25em;
 	line-height: 19px;
+}
+
+
+
+
+/**************************************************
+BASKET
+**************************************************/
+
+#basket h2 {
+	padding: 20px 0 10px 5px;
+	font: bold 36px/36px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+	border-bottom: 1px dotted #e0e0e0;
+}
+
+#basket table {
+	width: 100%;
+}
+#basket th {
+	border-bottom: 1px solid #949494;
+	width: 100px;
+	text-align: right;
+}
+#basket td {
+	border-bottom: 1px solid #e0e0e0;
+	padding: 5px 0;
+	text-align: right;
+	vertical-align: middle;
+	color: #4a4a4a;
+}
+#basket .product {
+	padding-left: 5px;
+	text-align: left;
+	width: auto;
+}
+#basket .product img {
+	vertical-align: middle;
+	margin-right: 10px;
+}
+#basket td.remove {
+	padding-right: 10px;
+}
+#basket .remove a {
+	display: block;
+	margin: 0;
+	float: right;
+	width: 24px;
+	height: 0;
+	line-height: 24px;
+	padding: 24px 0 0;
+	background: url(../images/volo/close2.png);
+	overflow: hidden;
+	font-size: 0.1em;
+}
+#basket .remove a:hover {
+	background-position: 0 100%;
+}
+#basket .quantity input {
+	width: 50px;
+	border: 1px solid #d9d9d9;
+	color: #4a4a4a;
+}
+#basket .subtotal {
+	padding-right: 5px;
+}
+
+#basket .ui-spinner {
+	display: block;
+}
+#basket .quantity .ui-spinner-input {
+	margin: 0 15px 0 0;
+	padding: 4px 0 4px 10px;
+	border-right: 0;
+	width: 34px;
+	height: 18px;
+	line-height: 18px;
+}
+#basket .ui-spinner {
+	position: relative;
+}
+#basket .ui-spinner-button {
+	position: absolute;
+	right: 0;
+	width: 15px;
+	height: 14px;
+	background: url(../images/volo/spinner.png);
+	text-indent: -9999em;
+}
+#basket .ui-spinner-up {
+	top: 0;
+}
+#basket .ui-spinner-up:hover {
+	background-position: 100% 0;
+}
+#basket .ui-spinner-down {
+	top: 14px;
+	background-position: 0 100%;
+}
+#basket .ui-spinner-down:hover {
+	background-position: 100% 100%;
+}
+#basket .ui-spinner-button .ui-icon {
+	display: none;
+}
+
+#basket .checkout {
+	padding: 15px 0;
+	text-align: right;
+}
+#basket .checkout input, #basket .checkout button {
+	border: 0;
+	padding: 0;
+	width: 190px;
+	height: 35px;
+	background: url(../images/volo/cartbutton3.png);
+	color: #252525;
+	font: bold 18px/35px "Open Sans Condensed", "Open Sans", Arial, Helvetica, sans-serif;
+	text-align: center;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+#basket .checkout input:hover, #basket .checkout button:hover {
+	background-position: 0 100%;
+}
+#shopping-cart-table tfoot td {
+	padding-right: 105px;
+}
+
+#basket #discount {
+	text-align: right;
+	padding: 30px 5px 0 0;
+}
+#basket #discount input {
+	margin: 0 8px;
+	padding: 2px 0 2px 5px;
+	border: 1px solid #d9d9d9;
+	width: 93px;
+	height: 18px;
+	line-height: 18px;
+	color: #4a4a4a;
+}
+#basket #discount button {
+	height: 24px;
+	line-height: 24px;
+	padding: 0 10px;
+	border: 0;
+	text-transform: uppercase;
+	background: url(../images/volo/button.png) 100% -2px;
+	color: #252525;
+	text-align: center;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+#basket #discount button:hover {
+	background-position: 100% -30px;
+}
+#basket #discountAmount {
+	display: none;
+}
+#basket .value {
+	float: right;
+	padding-left: 25px;
+	min-width: 75px;
+	color: #4a4a4a;
+}
+
+#basket #total {
+	text-align: right;
+	padding: 35px 5px 15px;
+	font-size: 24px;
+	line-height: 24px;
+}
+#basket .adjustment {
+	text-align: right;
+	padding: 5px 5px 0;
 }
 
 

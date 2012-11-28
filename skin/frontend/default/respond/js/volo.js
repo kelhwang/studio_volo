@@ -165,4 +165,18 @@ $j(document).ready(function() {
 	
 	}
 	
+	
+	
+	/****************************************
+	PRODUCT PAGE
+	****************************************/
+	
+	if($j('body').hasClass('checkout-cart-index')) { 
+		$j('.spinner').spinner({
+			min: 0
+		});
+		
+		$j('#discount .value').html($j('#discountAmount').html());
+	}
+
 });
